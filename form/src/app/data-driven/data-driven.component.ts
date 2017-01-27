@@ -17,5 +17,7 @@ myForm : FormGroup;
     })
   }
 
-
+  onSubmit(){
+    console.log(this.myForm);
+  }
 }
