@@ -15,7 +15,11 @@ export class TemplateDrivenComponent {
     username: "",
     email: "",
     password: "",
+    gender: "male",
   }
+  genders = [
+    "male", "female"
+  ];
 
   onSubmit(form: NgForm) {
     console.log(form.value);

@@ -6,7 +6,7 @@
       <input type="text"
              class="form-control"
              id="username"
-             [(ngModel)] = "user.username"
+             [(ngModel)]="user.username"
              name="username"
              required>
     </div>
@@ -17,27 +17,26 @@
         type="text"
         class="form-control"
         id="email"
-        [(ngModel)] = "user.email"
+        [(ngModel)]="user.email"
         name="email"
         required
-      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
     </div>
-
+  </div>
     <div class="form-group">
       <label for="password">password</label>
       <input type="password"
              class="form-control"
              id="password"
-             [(ngModel)] = "user.password"
+             [(ngModel)]="user.password"
              name="password"
              required>
 
     </div>
-    <div class="radio">
-      <label>
+    <div *ngFor="let g of genders">
+      <label class="radio-inline"><input type="radio" [(ngModel)]="user.gender" name="gender" [value] = "g">{{g}}</label>
 
-      </label>
     </div>
     <button type="submit" class="btn-primary"> Submit</button>
-  </div>
+
 </form>
