@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {FormGroup, FormControl} from "@angular/forms";
 
 @Component({
   selector: 'fm-data-driven',
   templateUrl: './data-driven.component.html',
 })
-export class DataDrivenComponent implements OnInit {
+export class DataDrivenComponent {
+myForm : FormGroup;
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor() {
+    this.myForm = new FormGroup({
+      'username': new FormControl(),
+      'email': new FormControl(),
+      'password': new FormControl(),
+    })
   }
+
 
 }
