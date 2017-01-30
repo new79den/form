@@ -25,6 +25,14 @@ myForm : FormGroup;
       }),
       'password': ['', Validators.required],
     });
+
+    /*this.myForm.valueChanges.subscribe(
+      (data: any) => console.log(data)
+    );
+    this.myForm.statusChanges.subscribe(
+     (data: any) => console.log(data)
+     );*/
+
   }
 
   onSubmit(){
